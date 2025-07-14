@@ -33,6 +33,14 @@ A **React-based adaptive photo gallery** that intelligently optimizes user exper
 - **Responsive Design**: Adapts from single-column mobile to multi-column desktop  
 - **Performance Monitoring**: Comprehensive analytics with before/after comparisons  
 
+### Network Intelligence
+![Network Status Monitoring](Screenshots/network-status.png)
+*Real-time network monitoring with adaptive quality recommendations*
+
+### Performance Analytics
+![Performance Metrics Dashboard](Screenshots/performance-metrics.png)
+*Comprehensive performance tracking with before/after comparisons*
+
 ---
 
 ## 🛠️ Technology Stack
