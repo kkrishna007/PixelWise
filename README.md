@@ -41,9 +41,19 @@ A **React-based adaptive photo gallery** that intelligently optimizes user exper
 *Real-time network monitoring with adaptive quality recommendations*
 
 ### Performance Analytics
-![Performance Metrics Dashboard](Screenshots/performance-metrics.png)
 
-*Comprehensive performance tracking with before/after comparisons*
+<table>
+  <tr>
+    <td width="50%">
+      <img src="Screenshots/performance-metrics.png" alt="Performance Metrics Dashboard" width="100%">
+      <p align="center"><em>Standard performance metrics view</em></p>
+    </td>
+    <td width="50%">
+      <img src="Screenshots/performance-metrics2.png" alt="Performance Metrics Comparison" width="100%">
+      <p align="center"><em>Before/after optimization comparison view</em></p>
+    </td>
+  </tr>
+</table>
 
 ---
 
