@@ -1,0 +1,294 @@
+.settings-panel {
+  /* Inherits .card styles from global.css */
+}
+
+.settings-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.settings-section {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.settings-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.settings-section h4 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.quality-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.quality-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.quality-option:hover {
+  background: var(--background-color);
+  border-color: var(--border-color);
+}
+
+.quality-option input[type="radio"] {
+  margin-top: 0.125rem;
+}
+
+.option-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.quality-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.quality-description {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.toggle-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.toggle-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: var(--background-color);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border-color);
+}
+
+.toggle-option:hover {
+  background: #f1f5f9;
+  border-color: var(--primary-color);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.toggle-option input[type="checkbox"] {
+  margin-top: 0.125rem;
+}
+
+.toggle-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.toggle-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.toggle-description {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.network-speed-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background: var(--surface-color);
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+}
+
+.network-speed-options label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.speed-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.speed-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: var(--surface-color);
+}
+
+.speed-option:hover {
+  background: var(--background-color);
+  border-color: var(--primary-color);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.speed-option input[type="radio"]:checked + .speed-info {
+  color: var(--primary-color);
+}
+
+.speed-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.speed-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.speed-value {
+  font-size: 0.75rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.speed-description {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.settings-footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.current-settings h5 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.config-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.config-item {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.settings-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.modal-content.settings-panel {
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Settings Mobile */
+@media (max-width: 768px) {
+  .config-summary {
+    flex-direction: column;
+  }
+  
+  .toggle-description {
+    margin-top: 0.25rem;
+  }
+  
+  .quality-description {
+    margin-top: 0.25rem;
+  }
+  
+  .speed-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .settings-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-sections {
+    gap: 1rem;
+  }
+  
+  .toggle-option {
+    padding: 0.5rem;
+  }
+  
+  .quality-option {
+    padding: 0.5rem;
+  }
+  
+  .speed-option {
+    padding: 0.5rem;
+  }
+  
+  .network-speed-options {
+    padding: 0.5rem;
+  }
+  
+  .modal-content.settings-panel {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .speed-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .modal-content.settings-panel {
+    max-width: 800px;
+  }
+}
+
+/* Focus states for accessibility */
+.quality-option:focus-within,
+.toggle-option:focus-within,
+.speed-option:focus-within {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}

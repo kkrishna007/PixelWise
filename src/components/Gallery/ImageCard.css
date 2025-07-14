@@ -1,0 +1,153 @@
+.image-card {
+  position: relative;
+  background: var(--surface-color);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  aspect-ratio: 3/2;
+}
+
+.image-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.image-card.loaded {
+  border-color: var(--success-color);
+}
+
+.image, .image-placeholder {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-placeholder {
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+}
+
+.image-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--error-color);
+  background: #fef2f2;
+  gap: 0.5rem;
+}
+
+.image-error svg {
+  width: 32px;
+  height: 32px;
+}
+
+.image-error p {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.image-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  padding: 1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.image-card:hover .image-info {
+  transform: translateY(0);
+}
+
+.image-info h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.image-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+
+.image-quality {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.load-time {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.image-skeleton {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 25%,
+    #e0e0e0 50%,
+    #f0f0f0 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+.skeleton-content {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.1) 0%,
+    rgba(245, 158, 11, 0.1) 100%
+  );
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Image Card Mobile */
+@media (max-width: 768px) {
+  .image-card {
+    aspect-ratio: 1;
+  }
+  
+  .image-info {
+    transform: translateY(0);
+    position: relative;
+    background: var(--surface-color);
+    color: var(--text-primary);
+    padding: 0.75rem;
+  }
+  
+  .image-quality {
+    background: var(--background-color);
+    color: var(--primary-color);
+  }
+  
+  .load-time {
+    background: var(--background-color);
+    color: var(--text-secondary);
+  }
+}

@@ -1,0 +1,192 @@
+.network-status {
+  /* Inherits .card styles from global.css */
+}
+
+.network-simulation label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.network-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.network-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row .label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.detail-row .value {
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.simulation-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--background-color);
+  border-radius: 6px;
+}
+
+.simulation-controls label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.simulation-controls select {
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: var(--surface-color);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+}
+
+.simulation-note {
+  margin-top: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.optimal-quality {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: var(--background-color);
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+.quality-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.quality-low {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.quality-medium {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.quality-high {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.status-icon {
+  font-size: 1.2rem;
+}
+
+.signal-bars {
+  display: flex;
+  gap: 2px;
+  align-items: end;
+  margin-left: 0.5rem;
+}
+
+.signal-bar {
+  width: 3px;
+  background: #e5e7eb;
+  border-radius: 1px;
+  transition: background-color 0.2s ease;
+}
+
+.signal-bar:nth-child(1) { height: 4px; }
+.signal-bar:nth-child(2) { height: 6px; }
+.signal-bar:nth-child(3) { height: 8px; }
+.signal-bar:nth-child(4) { height: 10px; }
+
+.signal-bar.active {
+  background: var(--success-color);
+}
+
+.network-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--background-color);
+  border-radius: 6px;
+}
+
+.network-stats .stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.network-stats .stat-value {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.network-stats .stat-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* Network Status Mobile */
+@media (max-width: 768px) {
+  .optimal-quality {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  
+  .network-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .network-stats .stat-item {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .simulation-controls {
+    padding: 0.75rem;
+  }
+  
+  .network-stats {
+    padding: 0.75rem;
+  }
+}
