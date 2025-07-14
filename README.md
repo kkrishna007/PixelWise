@@ -4,6 +4,16 @@ A **React-based adaptive photo gallery** that intelligently optimizes user exper
 
 ---
 
+## 🌐 Live Demo & Screenshots
+
+### Desktop Experience
+![Pixelwise Desktop Dashboard](Screenshots/desktop-dashboard.png)
+*Full desktop view showing adaptive dashboard and responsive gallery*
+
+### Mobile Experience  
+![Pixelwise Mobile Layout](Screenshots/mobile-layout.png)
+*Mobile-optimized single-column layout with touch-friendly controls*
+
 ## 🎯 What Makes Pixelwise Smart
 
 - **Network-Aware Loading**: Automatically detects 2G, 3G, 4G, and WiFi connections to optimize image quality  
