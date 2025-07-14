@@ -35,10 +35,12 @@ A **React-based adaptive photo gallery** that intelligently optimizes user exper
 
 ### Network Intelligence
 ![Network Status Monitoring](Screenshots/network-status.png)
+
 *Real-time network monitoring with adaptive quality recommendations*
 
 ### Performance Analytics
 ![Performance Metrics Dashboard](Screenshots/performance-metrics.png)
+
 *Comprehensive performance tracking with before/after comparisons*
 
 ---
@@ -82,6 +84,7 @@ npm run build
 
 ### Advanced Settings Panel
 ![Settings Panel](Screenshots/settings-panel.png)
+
 *Comprehensive settings panel with network simulation and quality controls*
 
 ### Image Quality Settings
