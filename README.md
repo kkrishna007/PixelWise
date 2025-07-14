@@ -38,7 +38,7 @@ A **React-based adaptive photo gallery** that intelligently optimizes user exper
 
 ```bash
 # Clone the repository
-git clone [https://github.com/YOUR_USERNAME/pixelwise.git](https://github.com/kkrishna007/PixelWise.git)
+git clone https://github.com/kkrishna007/PixelWise.git
 
 # Navigate to project directory
 cd pixelwise
