@@ -80,6 +80,10 @@ npm run build
 
 ## 🎛️ Configuration Options
 
+### Advanced Settings Panel
+![Settings Panel](Screenshots/settings-panel.png)
+*Comprehensive settings panel with network simulation and quality controls*
+
 ### Image Quality Settings
 
 - **Auto**: Adapts automatically to network conditions  
